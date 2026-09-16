@@ -6,6 +6,16 @@ A polished **React + TypeScript + Vite** dashboard UI for exploring Cloudflare W
 
 ![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white) ![TypeScript 5.8](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white) ![Vite 6](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white) ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white) ![Recharts 3](https://img.shields.io/badge/Recharts-3-FF6384?logo=recharts&logoColor=white) ![Lucide React](https://img.shields.io/badge/Lucide_React-Icons-F56565?logo=lucide&logoColor=white) ![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub_Pages-222222?logo=github&logoColor=white) ![Cloudflare Pages](https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?logo=cloudflare&logoColor=white) ![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)
 
+## 🌐 Live Demo
+
+### 🚀 [Open CF Worker Insights](https://jeeva-zone.github.io/cloudflare-dashboard-details/)
+
+The dashboard is live on **GitHub Pages** and automatically redeploys whenever changes are pushed to `main`.
+
+[![CF Worker Insights dashboard preview](https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjeeva-zone.github.io%2Fcloudflare-dashboard-details%2F?w=1400)](https://jeeva-zone.github.io/cloudflare-dashboard-details/)
+
+> 💡 **Tip:** Click the preview above to open the live dashboard.
+
 ---
 
 ## ✨ Features
@@ -42,7 +52,7 @@ The repository is configured for automatic GitHub Pages deployment with **GitHub
 
 ### Live URL
 
-After the first successful workflow run, the site will be available at:
+The live dashboard is available at:
 
 **https://jeeva-zone.github.io/cloudflare-dashboard-details/**
 
@@ -185,6 +195,7 @@ cloudflare-dashboard-details/
 
 ## 🔗 Useful Links
 
+- **Live Demo:** https://jeeva-zone.github.io/cloudflare-dashboard-details/
 - **Repository:** https://github.com/Jeeva-zone/cloudflare-dashboard-details
 - **GitHub Pages:** https://pages.github.com/
 - **Cloudflare Pages:** https://developers.cloudflare.com/pages/
