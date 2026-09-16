@@ -4,7 +4,7 @@ A polished **React + TypeScript + Vite** dashboard UI for exploring Cloudflare W
 
 > **ℹ️ Demo status:** This repository is a self-contained frontend demo. Metrics and invocation logs come from local generators in `src/data/mockData.ts`; it does **not** connect to a live Cloudflare account.
 
-![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white) ![TypeScript 5.8](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white) ![Vite 6](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white) ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white) ![Recharts 3](https://img.shields.io/badge/Recharts-3-FF6384?logo=recharts&logoColor=white) ![Lucide React](https://img.shields.io/badge/Lucide_React-Icons-F56565?logo=lucide&logoColor=white) ![Cloudflare Pages](https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?logo=cloudflare&logoColor=white) ![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)
+![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white) ![TypeScript 5.8](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white) ![Vite 6](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white) ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white) ![Recharts 3](https://img.shields.io/badge/Recharts-3-FF6384?logo=recharts&logoColor=white) ![Lucide React](https://img.shields.io/badge/Lucide_React-Icons-F56565?logo=lucide&logoColor=white) ![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub_Pages-222222?logo=github&logoColor=white) ![Cloudflare Pages](https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?logo=cloudflare&logoColor=white) ![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)
 
 ---
 
@@ -33,6 +33,34 @@ A polished **React + TypeScript + Vite** dashboard UI for exploring Cloudflare W
 | Lucide React | Icons |
 
 Only dependencies required by the current frontend are kept in `package.json`.
+
+---
+
+## 🌐 Deploy to GitHub Pages
+
+The repository is configured for automatic GitHub Pages deployment with **GitHub Actions**.
+
+### Live URL
+
+After the first successful workflow run, the site will be available at:
+
+**https://jeeva-zone.github.io/cloudflare-dashboard-details/**
+
+### One-time GitHub setup
+
+1. Open the repository on GitHub.
+2. Go to **Settings → Pages**.
+3. Under **Build and deployment → Source**, select **GitHub Actions**.
+4. Push to `main` or run **Deploy to GitHub Pages** manually from the **Actions** tab.
+
+Every push to `main` automatically:
+
+1. Installs the npm dependencies.
+2. Runs `npm run build`.
+3. Uploads the generated `dist/` directory.
+4. Publishes it through GitHub Pages.
+
+The Vite configuration automatically uses `/cloudflare-dashboard-details/` when the build runs in GitHub Actions, so asset URLs work correctly on the repository subpath. Local development and Cloudflare Pages continue to use `/`.
 
 ---
 
@@ -128,6 +156,9 @@ https://developers.cloudflare.com/analytics/graphql-api/
 
 ```text
 cloudflare-dashboard-details/
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml
 ├── src/
 │   ├── components/
 │   │   ├── ClientAnalyticsTable.tsx
@@ -155,8 +186,13 @@ cloudflare-dashboard-details/
 ## 🔗 Useful Links
 
 - **Repository:** https://github.com/Jeeva-zone/cloudflare-dashboard-details
+- **GitHub Pages:** https://pages.github.com/
 - **Cloudflare Pages:** https://developers.cloudflare.com/pages/
 - **Cloudflare Pages Git integration:** https://developers.cloudflare.com/pages/get-started/git-integration/
 - **Cloudflare Pages Direct Upload:** https://developers.cloudflare.com/pages/get-started/direct-upload/
 - **Cloudflare Workers:** https://developers.cloudflare.com/workers/
 - **Cloudflare GraphQL API:** https://developers.cloudflare.com/analytics/graphql-api/
+
+## 📄 License
+
+This project is released under the MIT License.
