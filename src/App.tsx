@@ -69,9 +69,7 @@ export default function App() {
     setClientLogs((prev) => [createRandomLog(), ...prev.slice(0, 39)]);
     setMetrics(getKpiMetrics(timeRange, selectedWorker.id));
     setTimelineData(generateTimelineData(timeRange, selectedWorker.id));
-
-    const timer = window.setTimeout(() => setIsRefreshing(false), 400);
-    return () => window.clearTimeout(timer);
+    window.setTimeout(() => setIsRefreshing(false), 400);
   }, [timeRange, selectedWorker]);
 
   const handleTriggerTrafficBurst = useCallback(() => {
@@ -81,7 +79,7 @@ export default function App() {
       totalInvocations: prev.totalInvocations + 480,
     }));
 
-    const bursts = Array.from({ length: 4 }, createRandomLog);
+    const bursts = Array.from({ length: 4 }, () => createRandomLog());
     setClientLogs((prev) => [...bursts, ...prev.slice(0, 36)]);
     setBannerNotice('Traffic Burst Injected: +480 requests registered across edge isolates.');
     window.setTimeout(() => setBannerNotice(null), 4000);
